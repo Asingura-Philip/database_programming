@@ -33,3 +33,13 @@ price int
 
 alter table products add constraint unique(product_name);
 
+select * from products;
+
+insert into products values(901,"maize",5500),
+(902,"beans",4000),
+(903,"peas",4000),
+(904,"rice",6000);
+
+alter table products modify price int not null;
+
+insert into products values(905,"potatos",6000);
