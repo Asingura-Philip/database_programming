@@ -43,3 +43,18 @@ insert into products values(901,"maize",5500),
 alter table products modify price int not null;
 
 insert into products values(905,"potatos",6000);
+
+ set sql_safe_updates = 0;
+
+-- check constraint
+alter table employee add constraint chk_pay check(hourly_pay >= 30000);
+
+select * from employee;
+
+insert into employee values(106,"Nathan","Niel",40000,current_date());
+
+ -- drop check
+ alter table employee drop constraint chk_pay;
+ 
+ insert into employee values(107,"Matthew","Cycamore",20000,current_date());
+
