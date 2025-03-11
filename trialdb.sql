@@ -92,9 +92,9 @@ alter table products alter price set default 0;
 
 -- select * from transactions;
 
--- show tables;
+-- show tables; 
 
--- drop table transactions;
+drop table transactions;
 
 -- primary keys
 create table transactions(
@@ -115,3 +115,25 @@ insert into transactions values(401,3500),
 select * from transactions;
 
 select amount from transactions where transactions_id = 404;
+
+
+-- auto increament 
+-- drop table staff;
+
+create table staff(
+staff_id int primary key auto_increment,
+fullname varchar(50),
+dept_no int
+);
+
+insert into staff(fullname,dept_no) values("Bob belcher",501),
+("Linda belcher",502),
+("Tina Belcher", 501),
+("Gene Belcher",502),
+("Louise Belcher",504);
+
+alter table staff auto_increment=256001;
+
+select * from staff;
+
+
