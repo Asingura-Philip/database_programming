@@ -9,7 +9,12 @@ hourly_pay int,
 hire_date date 
 );
 
-
+create table staff(
+staff_id int,
+first_name varchar(30),
+last_name varchar(30),
+dept_no int
+);
 
 select * from employee;
 
