@@ -81,14 +81,37 @@ insert into products (product_id,product_name) values(906,"sack"),
 
 alter table products alter price set default 0;
 
-create table transactions(
-transaction_id int,
-amount int,
-transaction_date datetime default now()
-);
+-- create table transactions(
+-- transaction_id int,
+-- amount int,
+-- transaction_date datetime default now()
+-- );
 
-insert into transactions(transaction_id,amount) values(01,30000)
-,(02,23000);
+-- insert into transactions(transaction_id,amount) values(01,30000)
+-- ,(02,23000);
+
+-- select * from transactions;
+
+-- show tables;
+
+-- drop table transactions;
+
+-- primary keys
+create table transactions(
+transactions_id int primary key,
+amount int
+); 
+
+-- if table already created and want to set primary key 
+-- alter table transactions add constraint primary key(transaction_id);
+
+desc transactions;
+
+insert into transactions values(401,3500),
+(402,57000),
+(403,39000),
+(404,5000);
 
 select * from transactions;
 
+select amount from transactions where transactions_id = 404;
