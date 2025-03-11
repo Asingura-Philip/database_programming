@@ -136,4 +136,11 @@ alter table staff auto_increment=256001;
 
 select * from staff;
 
+-- foreign key constraint
+-- to add forign key
+-- foreign key(employee_id) references staff(employee_id)
+-- drop foreign key
+-- alter table employee drop foreign key {foreign key name}
+-- give foregn key unique name
+-- alter table employee add constraint fk_id foreign key(employee_id) references employee(employee_id)
 
