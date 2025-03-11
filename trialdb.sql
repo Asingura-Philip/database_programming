@@ -67,6 +67,28 @@ insert into employee values(106,"Nathan","Niel",40000,current_date());
  
  insert into employee values(107,"Matthew","Cycamore",20000,current_date());
 
+-- default constraint
 
+select * from products;
 
+insert into products (product_id,product_name) values(906,"sack"),
+(907,"polythene"),
+(908,"paperbag"),
+(909,"string"),
+(910,"thread");
+
+-- delete from products where price = 0; 
+
+alter table products alter price set default 0;
+
+create table transactions(
+transaction_id int,
+amount int,
+transaction_date datetime default now()
+);
+
+insert into transactions(transaction_id,amount) values(01,30000)
+,(02,23000);
+
+select * from transactions;
 
