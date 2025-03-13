@@ -32,7 +32,7 @@ begin
 end //
 
 delimiter ;
-
+call procedure1();
 -- create a procedure named procedure2 that displays the total amount recieved per depertment
 delimiter //
 
@@ -44,7 +44,7 @@ begin
 end //
 
 delimiter ;
-
+call procedure2();
 
 -- create a procedure named procedure3 that will delete any record where the amount recieved is not captured
 delimiter //
