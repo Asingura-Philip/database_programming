@@ -46,69 +46,12 @@ create table products(
     price int
     );
 
-alter table orders auto_increment=201;
+alter table products auto_increment=201;
 
-insert into orders(product_name,price) values
+insert into products(product_name,price) values
 	('Laptop',500000),
     ('Smartphone',300000),
     ('Tablet',450000),
     ('Headphones',40000);
     
-
--- 1
-    
-DELIMITER //
-
-CREATE PROCEDURE procedure1()
-BEGIN
-    SELECT MIN(amount) AS LeastAmountReceived
-    FROM donation
-    WHERE Department = 'CT';
-END //
-
-DELIMITER ;
-
-    
-    --2
-DELIMITER //
-
-CREATE PROCEDURE procedure2()
-BEGIN
-    SELECT Department, SUM(amount) AS TotalAmountReceived
-    FROM donation
-    GROUP BY Department;
-END //
-
-DELIMITER ;
--- 3
-DELIMITER //
-
-CREATE PROCEDURE procedure3()
-BEGIN
-    DELETE FROM donation
-    WHERE amount IS NULL;
-END //
-
-DELIMITER ;
--- 4
-DELIMITER //
-
-CREATE PROCEDURE procedure4(IN old_department VARCHAR(10), IN new_department VARCHAR(10))
-BEGIN
-    UPDATE donation
-    SET Department = new_department
-    WHERE Department = old_department;
-END //
-
-DELIMITER ;
-
-
---
-ALTER TABLE donation
-ADD CONSTRAINT check_amount
-CHECK (amount BETWEEN 12000 AND 25000);
---
-ALTER TABLE donation
-ADD CONSTRAINT check_department
-CHECK (Department IN ('CT', 'SOT', 'SOB'));
-
+select * from products;
