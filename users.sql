@@ -3,7 +3,7 @@
 -- in the employee table in the cs db .other columns should be updatable
 
 create user 'seven'@'localhost' identified by 'seven';
- alter user 'six'@'localhost' identified by 'six123';
+alter user 'six'@'localhost' identified by 'six123';
  
 rename user 'eight'@'localhost' to 'demo'@'localhost';
 alter user 'seven'@'localhost' password expire;
@@ -26,5 +26,5 @@ show grants for 'ten'@'localhost';
 create role data_entrant;
 grant insert, select on bscs.employee to data_entrant;
     
- select user,host from mysql.user;
+select user,host from mysql.user;
     
