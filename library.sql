@@ -78,10 +78,16 @@ update borrowed_books set return_date = '2025-03-2' where borrow_id = 704;
 delete from borrowed_books where member_id = 3003;
 delete from members where member_id = 3003;
 
+-- joins
+-- inner joins
+select book_id,first_name,last_name from members inner join borrowed_books
+on members.member_id = borrowed_books.member_id;
 
+-- left join
+select * from books left join borrowed_books on books.book_id = borrowed_books.book_id;
 
-
-
+-- right join
+select * from books right join borrowed_books on books.book_id = borrowed_books.book_id;
 
 
 
