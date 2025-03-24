@@ -28,6 +28,11 @@ create table jobs(
     job_description varchar(255)
 );
 
+create table applications(
+	employee_id int,
+    application_no int,
+    application_date date
+);
 
 insert into jobs(job_title,job_description) values
 	('developer','should know react js'),
